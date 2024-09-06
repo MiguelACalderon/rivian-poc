@@ -2,7 +2,7 @@ import { MongoClient } from 'mongodb';
 
 
 // MongoDB connection URI
-const uri = "mongodb+srv://test:123@demo.lfvxb.mongodb.net/?retryWrites=true&w=majority&appName=DEMO"
+const uri = "CONNECTION"
 
 const client = new MongoClient(uri);
 await client.connect(); // Ensure the client is connected
