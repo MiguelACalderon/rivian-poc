@@ -1,0 +1,62 @@
+{
+  "executionSuccess": true,
+  "nReturned": 0,
+  "executionTimeMillis": 11,
+  "totalKeysExamined": 0,
+  "totalDocsExamined": 10223,
+  "executionStages": {
+    "stage": "SORT",
+    "nReturned": 0,
+    "executionTimeMillisEstimate": 5,
+    "works": 10225,
+    "advanced": 0,
+    "needTime": 10224,
+    "needYield": 0,
+    "saveState": 10,
+    "restoreState": 10,
+    "isEOF": 1,
+    "sortPattern": {
+      "updated_at": -1
+    },
+    "memLimit": 104857600,
+    "limitAmount": 500,
+    "type": "simple",
+    "totalDataSizeSorted": 0,
+    "usedDisk": false,
+    "spills": 0,
+    "spilledDataStorageSize": 0,
+    "inputStage": {
+      "stage": "COLLSCAN",
+      "filter": {
+        "$and": [
+          {
+            "message_source": {
+              "$eq": "T2D"
+            }
+          },
+          {
+            "metadata_info.activity_type": {
+              "$eq": "vehicle_delivery"
+            }
+          },
+          {
+            "latest_version_for_type": {
+              "$exists": true
+            }
+          }
+        ]
+      },
+      "nReturned": 0,
+      "executionTimeMillisEstimate": 5,
+      "works": 10224,
+      "advanced": 0,
+      "needTime": 10223,
+      "needYield": 0,
+      "saveState": 10,
+      "restoreState": 10,
+      "isEOF": 1,
+      "direction": "forward",
+      "docsExamined": 10223
+    }
+  }
+}

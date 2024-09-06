@@ -1,0 +1,57 @@
+{
+  "executionSuccess": true,
+  "nReturned": 500,
+  "executionTimeMillis": 22,
+  "totalKeysExamined": 0,
+  "totalDocsExamined": 10223,
+  "executionStages": {
+    "stage": "SORT",
+    "nReturned": 500,
+    "executionTimeMillisEstimate": 10,
+    "works": 10725,
+    "advanced": 500,
+    "needTime": 10224,
+    "needYield": 0,
+    "saveState": 10,
+    "restoreState": 10,
+    "isEOF": 1,
+    "sortPattern": {
+      "updated_at": -1
+    },
+    "memLimit": 104857600,
+    "limitAmount": 500,
+    "type": "simple",
+    "totalDataSizeSorted": 380424,
+    "usedDisk": false,
+    "spills": 0,
+    "spilledDataStorageSize": 0,
+    "inputStage": {
+      "stage": "COLLSCAN",
+      "filter": {
+        "$and": [
+          {
+            "message_source": {
+              "$eq": "CS"
+            }
+          },
+          {
+            "latest_version_for_type": {
+              "$exists": true
+            }
+          }
+        ]
+      },
+      "nReturned": 8921,
+      "executionTimeMillisEstimate": 1,
+      "works": 10224,
+      "advanced": 8921,
+      "needTime": 1302,
+      "needYield": 0,
+      "saveState": 10,
+      "restoreState": 10,
+      "isEOF": 1,
+      "direction": "forward",
+      "docsExamined": 10223
+    }
+  }
+}
