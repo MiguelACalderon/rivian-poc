@@ -1,5 +1,7 @@
 import client from './mongodb.js';
 import fs from "fs";
+
+
 const query =  client.db("rivian").collection('metadata').find(
     {
       // Filters the documents where message_source is "T2D"
